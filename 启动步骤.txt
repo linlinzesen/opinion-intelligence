@@ -1,0 +1,30 @@
+========================================
+网络舆情事件智能分析系统 — 启动步骤
+========================================
+
+【环境要求】
+Python 3.10+、Node.js 18+
+
+【1. 后端】
+cd 小学期
+python -m venv .venv
+.venv\Scripts\activate        （Mac: source .venv/bin/activate）
+pip install -r requirements.txt
+cd backend
+python data_import.py          （仅首次，导入数据）
+python app.py                  → http://localhost:5000
+
+【2. 前端】（另外开一个终端）
+cd 小学期\frontend
+npm install                    （仅首次）
+npm run dev                    → http://localhost:5173
+
+【3. 可选 — 手动爬取】
+cd 小学期
+.venv\Scripts\activate
+cd crawler
+python run_pipeline.py
+
+【注意】
+- crawler\.env 中需要填写 DeepSeek API Key（不填也能跑，会自动用模拟数据）
+- 后端启动后会每 30 分钟自动执行一次爬取

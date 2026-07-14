@@ -1,0 +1,46 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ── Node.js ──
+node_modules/
+.npm-cache/
+dist/
+
+# ── IDE / Editor ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Claude Code ──
+.agents/
+
+# ── Environment & Secrets ──
+.env
+!.env.example
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+~$*.docx
+~$*.xlsx
+
+# ── Database & Data ──
+backend/instance/*.db
+crawler/data/*.csv
+crawler/data/*.json
+!crawler/data/.gitkeep
+
+# ── Office Temp Files ──
+~$*
